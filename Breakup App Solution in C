@@ -14,11 +14,11 @@ int main()
         {
             if(str[0]=='G' && str[i]=='1' && str[i+1]=='9')
             {
-                gf=gf+2;
+                gf=gf+2;//Gazi Tanbhir
             }
             else if(str[0]=='G' && str[i]=='2' && str[i+1]=='0')
             {
-                gf=gf+2;
+                gf=gf+2;//48(A)
             }
             else if(str[i]>='0' && str[i]<='9' && str[i+1]>='0' && str[i+1]<='9')
             {
@@ -26,9 +26,8 @@ int main()
             }
         }
     } while(n--);
-
+    //Gazi Tanbhir
     if(gf>bf) printf("Date\n");
     else printf("No Date\n");
     return 0;
 }
-
