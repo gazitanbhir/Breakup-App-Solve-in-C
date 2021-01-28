@@ -39,14 +39,38 @@ Constrains
 SAMPLE INPUT
  
 
-4
-G: I want to go on 19
-M: No that is not possible lets go on 21
-G: No 19 is final and 21 is not
-M: OKAY as you wish
+<<<<<<<CODE>>>>>>
+ #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-SAMPLE OUTPUT
+int main()
+{
+    int n,i,gf=0,bf=0,l;
+    scanf("%d",&n);
+    char str[1001];
+    do{
+        gets(str);
+        l=strlen(str);
+        for(i=0; i<l-1; i++)
+        {
+            if(str[0]=='G' && str[i]=='1' && str[i+1]=='9')
+            {
+                gf=gf+2;
+            }
+            else if(str[0]=='G' && str[i]=='2' && str[i+1]=='0')
+            {
+                gf=gf+2;
+            }
+            else if(str[i]>='0' && str[i]<='9' && str[i+1]>='0' && str[i+1]<='9')
+            {
+                bf=bf+1;
+            }
+        }
+    } while(n--);
 
-Date
+    if(gf>bf) printf("Date\n");
+    else printf("No Date\n");
+    return 0;
+}
 
-File submissions 
