@@ -1,4 +1,4 @@
-# CP-Solutions
+# Breakup App Linear Search Problem-Solutions in C
 
 
 
